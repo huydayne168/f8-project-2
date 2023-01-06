@@ -16,20 +16,24 @@ a {
     text-decoration: none;
     color: #000;
     display: inline-block;
+    text-align: center;
 }
 
 .sen-font {
     font-family: "Sen", sans-serif;
 }
 
-.poppins-font {
-    font-family: "Poppins", sans-serif;
-}
-
 .content {
+    display: flex;
     width: 1170px;
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
 }
 
 .btn {
@@ -43,23 +47,27 @@ a {
 
 .btn:hover {
     background-color: #ffb900;
-    color: #000;
+    color: #fff;
+}
+
+.fixed {
+    position: sticky;
+    top: -31px;
+    z-index: 1;
 }
 
 /* ======== private css ======== */
 /* ====header==== */
 header {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    height: calc(62px + 31px);
     background-color: #fffcf4;
+    padding-top: 31px;
 }
-/* ====menu==== */
-
-.menu {
-    padding-top: 36px;
-}
+/* =======Menu======= */
 
 .menu-wrapper {
+    padding: 5px 0px;
     display: flex;
     align-items: center;
 }
@@ -86,6 +94,7 @@ header {
     line-height: 1.75;
     text-align: center;
     color: #5f5b53;
+    transition: all 300ms ease;
 }
 
 .nav-list a::after {
@@ -96,12 +105,13 @@ header {
     height: 2px;
     display: none;
     border-radius: 1px;
-    transition: width 300ms ease;
+    transition: all 300ms ease;
 }
 
 .nav-list a:hover {
     color: #171100;
-    font-weight: 600;
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
     font-size: 1.6rem;
     line-height: 1.75;
 }
@@ -120,4 +130,268 @@ header {
     padding-left: 42px;
     padding-right: 42px;
     border-radius: 24.5px;
+}
+
+/* ======Hero CSS====== */
+.hero {
+    /* width: 100vw; */
+    /* height: calc(100vh - 93px); */
+    padding-top: 59px;
+    padding-bottom: 65px;
+    background-color: #fffcf4;
+}
+
+/* hero poster */
+.hero-poster {
+    margin-right: auto;
+    position: relative;
+}
+
+.hero-poster > img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero-poster .card {
+    position: absolute;
+    bottom: 48px;
+    right: -100px;
+    width: 270px;
+    height: 244px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.card .course-listed {
+    padding-top: 24px;
+    padding-left: 24px;
+}
+
+.card li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.card li img {
+    margin-right: 16px;
+}
+
+.card li p:nth-child(1) {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.card li p:nth-child(2) {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+/* hero content */
+.hero-content {
+    width: 40%;
+}
+
+.hero-content .heading {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.hero-content .desc .text {
+    margin-bottom: 38px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.hero-btn {
+    margin-bottom: 48px;
+}
+
+.hero-btn .btn:first-child {
+    padding: 17px 33px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #000;
+    border: solid 2px #171100;
+    border-radius: 32px;
+}
+
+.hero-btn .btn:last-child {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    padding: 17px 20px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #000;
+    border-radius: 32px;
+}
+
+.hero-btn .btn:last-child .play-icon {
+    margin-right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+}
+
+.hero-btn .btn:last-child .play-icon img {
+    transform: translateX(1.4px);
+}
+
+.hero-btn .btn:hover {
+    background-color: #ffb900;
+    color: #fff;
+}
+
+.hero-engagement {
+}
+
+.hero-engagement p {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.hero-engagement__listed ul {
+    display: flex;
+    gap: 28px;
+}
+
+.hero-engagement__listed li {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.hero-engagement__listed li span {
+    margin-right: 14px;
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+}
+
+/* ==========courses CSS============= */
+
+.courses {
+}
+
+.courses-wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 200px;
+}
+
+.courses .texts {
+    width: 458px;
+}
+
+.courses .texts .heading {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.courses .texts .desc {
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.courses-wrapper > .row:first-child {
+    margin-bottom: 55px;
+}
+
+.courses-wrapper > .row:last-child {
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.courses-wrapper .card {
+    width: 33.33333%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.courses-wrapper .card .card-img {
+    height: 278px;
+}
+
+.courses-wrapper .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.courses-wrapper .card .body {
+    padding: 16px 22px 22px;
+}
+
+.card .body .row {
+    justify-content: space-between;
+}
+
+.card .body .heading {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+    margin-bottom: 6px;
+}
+
+.card .body .desc {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+    margin-bottom: 12px;
+}
+
+.card .body .courses-price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.card .body .btn {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.card .rate span {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
 }
