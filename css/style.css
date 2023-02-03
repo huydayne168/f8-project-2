@@ -579,15 +579,17 @@ header {
 .blog {
     margin-top: 200px;
     background-color: #fffcf4;
+    position: relative;
 }
 
 .blog .content {
     flex-direction: column;
-    gap: 55px;
+    /* gap: 55px; */
 }
 
 .blog .header {
     padding-top: 96px;
+    margin-bottom: 55px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -615,12 +617,50 @@ header {
 
 .blog .cards {
     gap: 30px;
+    transition: all ease 300ms;
+}
+
+.blog .blog-slider {
+    /* padding: 10px; */
+    position: relative;
+}
+
+.blog-slider--wrapper {
+    overflow: hidden;
+}
+
+.blog-slider--btn {
+    /* position: absolute; */
+    z-index: 1;
+}
+
+.blog-slider--btn img {
+    /* object-fit: contain; */
+    width: 50px;
+    height: 50px;
+}
+
+.blog-slider--btn img:hover {
+    cursor: pointer;
+}
+
+.prev-btn img {
+    transform: rotate(-180deg);
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc((100% - 1170px) / 2 - 25px);
+}
+
+.next-btn img {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: calc((100% - 1170px) / 2 - 25px);
 }
 
 .blog .card-item {
-    flex: 1;
+    flex: 1 0 calc((100% - 60px) / 3);
     background: #ffffff;
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05); */
     border-radius: 16px;
     overflow: hidden;
 }
