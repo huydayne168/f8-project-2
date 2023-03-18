@@ -1,4 +1,4 @@
-// ======================blog slider=======================
+// ======================blog slider starts=======================
 
 window.addEventListener("load", function () {
     const blogSlider = document.querySelector(".blog-slider");
@@ -39,3 +39,4 @@ window.addEventListener("load", function () {
         }
     }
 });
+// ======================blog slider ends=======================
